@@ -1427,48 +1427,48 @@ footer .copyR img {
   display: none;
 }
 
-.allProjects {
+.Terms_and_condition {
   display: flex;
   flex-direction: column;
   gap: 32px;
   padding-bottom: 60px;
 }
-.allProjects .inner {
+.Terms_and_condition .inner {
   width: min(100% - 24px, 1320px);
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
-.allProjects .inner .col {
+.Terms_and_condition .inner .col {
   flex: 0 0 auto;
   width: 33.3%;
   padding: 8px;
 }
 @media (max-width: 992px) {
-  .allProjects .inner .col {
+  .Terms_and_condition .inner .col {
     width: 50%;
   }
 }
 @media (max-width: 576px) {
-  .allProjects .inner .col {
+  .Terms_and_condition .inner .col {
     width: 100%;
   }
 }
-.allProjects .loadMore {
+.Terms_and_condition .loadMore {
   width: -moz-min-content;
   width: min-content;
   white-space: nowrap;
   margin: auto;
   padding: 10px 30px;
 }
-.allProjects .loadMore img {
+.Terms_and_condition .loadMore img {
   width: 20px;
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: invert(1) contrast(2);
 }
-.allProjects .loadMore .loadingAnimation {
+.Terms_and_condition .loadMore .loadingAnimation {
   min-width: 20px;
   min-height: 20px;
   border: 2px solid var(--whiteColor);
