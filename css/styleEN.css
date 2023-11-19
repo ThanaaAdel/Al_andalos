@@ -1035,6 +1035,8 @@ textarea.inputForm {
   gap: 8px;
   justify-content: center;
   position: relative;
+  
+  
 }
 .project .inner .moreInfo .details img {
   width: 16px;
