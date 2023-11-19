@@ -412,6 +412,10 @@ header nav {
 }
 header nav .logo {
   margin: auto 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  size: 150;
 }
 header nav .logo img {
   height: 45px;
@@ -419,6 +423,12 @@ header nav .logo img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+     margin-right: 10px; /* Adjust margin as needed */
+
+}
+header nav .logo p {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
 }
 @media (max-width: 576px) {
   header nav .logo img {
@@ -790,17 +800,17 @@ textarea.inputForm {
 .mainIntro .inner .introSlider .mainSwiper {
   position: relative;
   width: 750px;
-  aspect-ratio: 9/6;
+  aspect-ratio: 8/6;
   border-radius: 2px;
 }
 @media (max-width: 1200px) {
   .mainIntro .inner .introSlider .mainSwiper {
-    width: 600px;
+    width: 500px;
   }
 }
 @media (max-width: 992px) {
   .mainIntro .inner .introSlider .mainSwiper {
-    width: 450px;
+    width: 400;
   }
 }
 @media (max-width: 768px) {
@@ -815,11 +825,11 @@ textarea.inputForm {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(var(--secondColor30), rgba(6, 37, 59, 0.4784313725));
+  
   position: absolute;
   bottom: 0;
   right: 0;
-  transition: var(--transition);
+  
   border-radius: 2px;
 }
 .mainIntro .inner .introSlider .mainSwiper .swiper-slide img {
@@ -1353,8 +1363,10 @@ footer .copyR img {
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to left, #06253b, rgba(6, 37, 59, 0.5294117647)), url(../img/banner.jpg);
-  background-size: cover;
+  background: linear-gradient(to left, #06253b, rgba(6, 37, 59, 0.5294117647)), url(../img/school.jpg);
+  background-size: contain;
+
+
 }
 @media (max-width: 768px) {
   .banner {
@@ -1386,7 +1398,7 @@ footer .copyR img {
   width: 16px;
   height: 16px;
   transform: scaleX(-1);
-  filter: invert(1);
+  filter: invert(3);
 }
 .banner .routeNav .Back:hover {
   background-color: var(--whiteColor);
@@ -2067,6 +2079,7 @@ footer .copyR img {
   min-width: 300px;
   padding: 10px;
   position: relative;
+  align-items: center;
 }
 .about .topSlider img {
   height: 550px;
@@ -2074,10 +2087,12 @@ footer .copyR img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+  margin-right: 10px; 
 }
 @media (max-width: 768px) {
   .about .topSlider img {
     height: 450px;
+
   }
 }
 .about .experience {
@@ -2458,6 +2473,7 @@ footer .copyR img {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  margin-right: 10px; 
 }
 .contactUs .contactForm form .col .inputFeild {
   flex: 1;
@@ -2602,7 +2618,103 @@ footer .copyR img {
     margin-top: 24px;
   }
 }
-
+.family {
+  padding: 70px 0 50px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 184, 222, 0.062745098), rgba(0, 184, 222, 0.1254901961));
+}
+.family .single {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.family .single .image {
+  position: relative;
+  width: 50%;
+  margin-left: 40px;
+}
+.family .single .image img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+}
+.family .single .image::before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  z-index: 1;
+  border: 2px solid #00b8de;
+  background-color: rgba(0, 184, 222, 0.1882352941);
+  border-radius: 4px;
+}
+.family .single .info {
+  position: relative;
+  z-index: 2;
+}
+.family .single .info h3 {
+  font-weight: bold;
+  font-size: 35px !important;
+  margin-bottom: 20px;
+  color: #005ca9;
+}
+.family .single .info h5 {
+  font-size: 25px !important;
+  color: #777;
+}
+.family .single:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.family .single:nth-child(odd) .image {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+.family .single:nth-child(odd) .image::before {
+  right: unset;
+  left: -20px;
+}
+.family .single:nth-child(odd) .info {
+  text-align: end;
+}
+@media (max-width: 768px) {
+  .family .single {
+    flex-direction: column !important;
+  }
+  .family .single .image {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .family .single .image img {
+    border-radius: 8px !important;
+    height: 200px;
+  }
+  .family .single .image::before {
+    width: 80px;
+    height: 80px;
+  }
+  .family .single .info {
+    margin-bottom: 40px;
+    text-align: center !important;
+  }
+  .family .single .info h3 {
+    font-size: 25px !important;
+    margin-bottom: 10px !important;
+  }
+  .family .single .info h5 {
+    font-size: 15px !important;
+  }
+  .family .single:last-child .info {
+    margin-bottom: 0;
+  }
+}
 .vision {
   padding: 50px 0;
   position: relative;
